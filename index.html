@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101612">
+<title>The Wedding — Dara & Ayub</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+:root{--bg:#101612;--cream:#f4efe5;--gold:#c8a96b;--muted:#cfc7b8;--card:#172019}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:Montserrat,sans-serif;font-weight:300}
+body.lock{overflow:hidden}.serif{font-family:"Cormorant Garamond",serif}
+.cover{position:fixed;inset:0;z-index:50;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 40%,#28392d 0,#101612 55%,#080c09 100%);transition:1s}
+.cover.hide{opacity:0;pointer-events:none;transform:scale(1.04)}
+.cover:before,.cover:after{content:"";position:absolute;width:35vw;height:35vw;border:1px solid #c8a96b55;border-radius:50%}
+.cover:before{top:-15vw;left:-15vw}.cover:after{right:-15vw;bottom:-15vw}
+.coverbox{padding:35px;max-width:650px}.eyebrow{letter-spacing:6px;font-size:11px;color:var(--gold);text-transform:uppercase}
+.cover h1{font-size:clamp(60px,11vw,120px);font-weight:400;line-height:.85;margin:28px 0}.amp{color:var(--gold);font-style:italic}
+.cover p{color:var(--muted);font-size:13px;letter-spacing:2px}.open{margin-top:32px;border:1px solid var(--gold);background:transparent;color:var(--cream);padding:14px 28px;border-radius:999px;letter-spacing:2px;cursor:pointer;transition:.3s}.open:hover{background:var(--gold);color:#111}
+.hero{min-height:100vh;display:flex;align-items:end;padding:70px 7%;position:relative;background:linear-gradient(180deg,#0001,#101612 95%),url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90") center/cover fixed}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#101612bb,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:800px}.hero .eyebrow{font-size:12px}.hero h2{font-size:clamp(55px,9vw,110px);font-weight:400;line-height:.85;margin:20px 0}.date{font-size:14px;letter-spacing:3px;color:var(--muted)}
+section{padding:100px 7%}.wrap{max-width:1100px;margin:auto}.center{text-align:center}
+.kicker{color:var(--gold);letter-spacing:5px;text-transform:uppercase;font-size:10px}.title{font:500 clamp(38px,6vw,68px)/.95 "Cormorant Garamond",serif;margin:14px 0 24px}.line{height:1px;width:80px;background:var(--gold);margin:20px auto 35px}.lead{max-width:700px;margin:auto;color:var(--muted);line-height:2}
+.couple{display:grid;grid-template-columns:1fr 120px 1fr;gap:25px;align-items:center;margin-top:55px}.person{text-align:center}.person img{width:min(270px,70vw);aspect-ratio:1;object-fit:cover;border-radius:50%;border:1px solid #c8a96b77;padding:7px}.person h3{font:500 36px "Cormorant Garamond",serif;margin:18px 0 4px}.person p{font-size:11px;color:var(--muted);letter-spacing:1px}.bigamp{font:italic 70px "Cormorant Garamond",serif;color:var(--gold)}
+.details{background:var(--cream);color:#20231f}.details .kicker{color:#8c6b37}.details .title{color:#283027}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.card{padding:45px 25px;border:1px solid #c8a96b66;background:#faf7f0;text-align:center}.card h3{font:500 34px "Cormorant Garamond",serif;color:#6f5430}.card p{font-size:12px;line-height:2;color:#555;margin-top:15px}
+.count{display:grid;grid-template-columns:repeat(4,1fr);max-width:720px;margin:40px auto;gap:12px}.time{border:1px solid #c8a96b55;padding:22px 8px}.time b{font:500 42px "Cormorant Garamond",serif;color:var(--gold);display:block}.time span{font-size:9px;letter-spacing:2px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gallery img{width:100%;height:360px;object-fit:cover;filter:saturate(.8);transition:.4s}.gallery img:hover{transform:translateY(-6px);filter:saturate(1)}
+.mapbox{border:1px solid #c8a96b55;padding:10px}.map{width:100%;height:330px;border:0;display:block}.btn{display:inline-block;margin-top:25px;padding:13px 25px;border:1px solid var(--gold);color:var(--cream);text-decoration:none;font-size:11px;letter-spacing:2px}.btn.dark{color:#20231f;border-color:#8c6b37}
+.rsvp{max-width:650px;margin:auto}.field{width:100%;padding:14px;margin:6px 0;border:1px solid #c8a96b44;background:#131b16;color:white;font:13px Montserrat}.submit{margin-top:10px;background:var(--gold);border:0;padding:14px 25px;cursor:pointer;color:#111;font-weight:600}
+.gift{display:grid;grid-template-columns:1fr 1fr;gap:25px}.bank{padding:28px;background:var(--card);border:1px solid #c8a96b44}.bank strong{font:500 30px "Cormorant Garamond",serif}.copy{margin-top:14px;background:transparent;color:var(--cream);border:1px solid #c8a96b77;padding:9px 15px;cursor:pointer}
+footer{text-align:center;padding:80px 20px;background:#080c09}.music{position:fixed;z-index:20;right:22px;bottom:22px;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:#101612dd;color:var(--gold);cursor:pointer}
+.reveal{opacity:0;transform:translateY(35px);transition:.9s}.reveal.show{opacity:1;transform:none}
+@media(max-width:700px){.hero{background-attachment:scroll}.couple,.cards,.gift{grid-template-columns:1fr}.bigamp{font-size:55px}.count{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:230px}section{padding:75px 20px}}
+</style>
+</head>
+<body class="lock">
+
+<div class="cover" id="cover">
+  <div class="coverbox">
+    <div class="eyebrow">The Wedding Of</div>
+    <h1 class="serif">Dara <span class="amp">&</span> Ayub</h1>
+    <p>18 • 10 • 2026</p>
+    <button class="open" onclick="openInvitation()">BUKA UNDANGAN</button>
+  </div>
+</div>
+
+<audio id="music" loop><source src="musik.mp3" type="audio/mpeg"></audio>
+<button class="music" id="musicBtn" onclick="toggleMusic()">♫</button>
+
+<style>
+  .music {
+    display: none;
+  }
+</style>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">A celebration of love</div>
+    <h2 class="serif">Dara <span class="amp">&</span> Ayub</h2>
+    <div class="date">MINGGU • 18 OKTOBER 2026 • MEDAN</div>
+  </div>
+</header>
+
+<section>
+<div class="wrap center reveal">
+  <div class="kicker">Assalamu'alaikum</div>
+  <h2 class="title">Dengan penuh rasa syukur</h2><div class="line"></div>
+  <p class="lead">Dengan memohon Aprilat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada hari bahagia kami.</p>
+  <div class="couple">
+    <div class="person"><img src="poto3.jpg"><h3>Ayub Rahmadsyah</h3><p>Putra dari Bapak Sunaryo & Ibu Muntama</p></div>
+    <div class="bigamp">&</div>
+    <div class="person"><img src="dara4.png"><h3>Dara Aprila</h3><p>Putri dari Bapak Andi & Ibu Salmiah</p></div>
+  </div>
+</div>
+</section>
+
+<section class="details">
+<div class="wrap center reveal">
+<div class="kicker">Save the date</div><h2 class="title">Waktu & Acara</h2><div class="line"></div>
+<div class="cards">
+<div class="card"><h3>Akad Nikah</h3><p>MINGGU, 18 OKTOBER 2026<br>08.00 WIB – Selesai<br>Jl. Karya Utama, Gang Utama VII, Kelurahan Pangkalan Masyhur</p></div>
+<div class="card"><h3>Resepsi</h3><p>MINGGU, 18 OKTOBER 2026<br>09.00 – Selesai<br>Jl. Karya Utama, Gang Utama VII, Kelurahan Pangkalan Masyhur</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap center reveal">
+<div class="kicker">Counting the days</div><h2 class="title">Menuju Hari Bahagia</h2><div class="line"></div>
+<div class="count"><div class="time"><b id="d">0</b><span>HARI</span></div><div class="time"><b id="h">0</b><span>JAM</span></div><div class="time"><b id="m">0</b><span>MENIT</span></div><div class="time"><b id="s">0</b><span>DETIK</span></div></div>
+</div>
+</section>
+
+<section>
+<div class="wrap center reveal"><div class="kicker">Our moments</div><h2 class="title">Galeri Kenangan</h2><div class="line"></div>
+<div class="gallery">
+<img src="1.png">
+<img src="2.png">
+<img src="3.png">
+<img src="8.png">
+<img src="13.png">
+<img src="20.jpg">
+</div></div>
+</section>
+
+<section class="details">
+<div class="wrap center reveal"><div class="kicker">Location</div><h2 class="title">Temui Kami</h2><div class="line"></div>
+<p>Jl. Karya Utama, Gg. Utama VII, Kel. Pangkalan Mansyur, Kec. Medan Johor, Kota Medan, Sumatera Utara<br></p>
+<div class="mapbox" style="margin-top:28px"><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d995.5492946232861!2d98.68118992843654!3d3.541932231302495!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMzInMjkuNiJOIDk4wrA0MCc1Mi4yIkU!5e0!3m2!1sen!2sid!4v1790194644053!5m2!1sen!2sid" loading="lazy"></iframe></div>
+<a class="btn dark" target="_blank" href="https://maps.app.goo.gl/mtBTNH5dkX9eHiVcA">BUKA GOOGLE MAPS</a>
+</div></section>
+
+<section>
+<div class="wrap center reveal"><div class="kicker">RSVP</div><h2 class="title">Konfirmasi Kehadiran</h2><div class="line"></div>
+<form class="rsvp" onsubmit="sendRSVP(event)">
+<input class="field" id="name" required placeholder="Nama Anda">
+<select class="field" id="attendance"><option>Hadir</option><option>Tidak dapat hadir</option></select>
+<textarea class="field" id="msg" rows="4" placeholder="Ucapan & doa"></textarea>
+<button class="submit" type="submit">KIRIM KONFIRMASI</button>
+</form></div>
+</section>
+
+<section>
+<div class="wrap center reveal"><div class="kicker">Wedding gift</div><h2 class="title">Tanda Kasih</h2><div class="line"></div>
+<p class="lead">Doa restu Anda merupakan hadiah terindah bagi kami. Bagi yang ingin memberikan tanda kasih:</p>
+<div class="gift" style="margin-top:30px;text-align:left">
+<div class="bank"><strong>MANDIRI</strong><br><span id="rek1">1050021661271</span><br>A.n. Ayub Rahmadsyah<br><button class="copy" onclick="copyText('rek1')">SALIN REKENING</button></div>
+<div class="bank"><strong>DANA</strong><br><span id="rek2">085840092584</span><br>A.n. Ayub Rahmadsyah<br><button class="copy" onclick="copyText('rek2')">SALIN NOMOR</button></div>
+</div></div>
+</section>
+
+<footer><div class="kicker">Thank you</div><h2 class="title">Dara <span class="amp">&</span> Ayub</h2><p style="color:#aaa;font-size:12px">Atas doa, restu, dan kehadiran Anda, kami ucapkan terima kasih.</p></footer>
+
+<script>
+const target=new Date("October 18, 2026 08:00:00").getTime();
+function countdown(){let x=Math.max(0,target-Date.now());document.getElementById('d').textContent=Math.floor(x/86400000);document.getElementById('h').textContent=Math.floor(x%86400000/3600000);document.getElementById('m').textContent=Math.floor(x%3600000/60000);document.getElementById('s').textContent=Math.floor(x%60000/1000)}
+setInterval(countdown,1000);countdown();
+function openInvitation(){document.getElementById('cover').classList.add('hide');document.body.classList.remove('lock');let a=document.getElementById('music');a.play().then(()=>document.getElementById('musicBtn').textContent='❚❚').catch(()=>{});}
+function toggleMusic(){let a=document.getElementById('music');if(a.paused){a.play();document.getElementById('musicBtn').textContent='❚❚'}else{a.pause();document.getElementById('musicBtn').textContent='♫'}}
+function copyText(id){navigator.clipboard.writeText(document.getElementById(id).textContent.trim()).then(()=>alert('Berhasil disalin!'))}
+function sendRSVP(e){e.preventDefault();let n=document.getElementById('name').value,a=document.getElementById('attendance').value,m=document.getElementById('msg').value;let phone='6285840092584';let text=`Halo, saya ${n}.%0AKehadiran: ${a}%0AUcapan: ${encodeURIComponent(m)}`;window.open(`https://wa.me/${phone}?text=${text}`,'_blank')}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+</script>
+</body>
+</html>
